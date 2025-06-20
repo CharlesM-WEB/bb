@@ -24,3 +24,5 @@ class Ball:
     def shape(self):
         return pygame.Rect(self.pos[0] -self.size, self.pos[1] -self.size, 10,10)
         
+    def collide(self,other):
+        return self.shape().colliderect(other.shape())

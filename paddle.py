@@ -11,3 +11,6 @@ class Paddle:
     
     def draw(self):
         pygame.draw.rect(pygame.display.get_surface(), self.color, self.shape())
+        
+    def collide(self,other):
+        return self.shape().colliderect(other.shape())

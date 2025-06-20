@@ -13,6 +13,9 @@ class Brick:
         pygame.draw.rect(pygame.display.get_surface(), self.color, self.shape())
     def destroy(self):
         pass
+    
+    def collide(self,other):
+        return self.shape().colliderect(other.shape())
            
 
 class Unbreakable_Brick(Brick):
