@@ -22,6 +22,9 @@ bricks = []
 balls = [startball]
 
 bricks.append(brick.Brick([400,200]))
+for i in range(40):
+    bricks.append(brick.Brick([i * 20, 180]))
+
 #game loop
 while True:
     time.sleep(0.01)
