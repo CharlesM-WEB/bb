@@ -1,3 +1,6 @@
+# DO: add the bricks to the balls as a parameter when cronstructing a ball\
+# so we can check for collisions in the substeps
+
 import pygame
 import random
 import ball 
@@ -51,11 +54,11 @@ while True:
                 
                 #horizontal bounce
                 if (angle > 310 or angle < 50) or (angle > 130 and angle < 230):
-                    a.velocity[0] *= -1
+                    a.velocity[0] += a.velocity[0] * -2
                     
                 #Vertical bounce
                 if (angle > 40 and angle < 140) or (angle > 220 and angle < 320):
-                    a.velocity[1] *= -1
+                    a.velocity[1] += a.velocity[1] * -2
     
     #Handeling player inputs
     if pygame.key.get_pressed()[pygame.K_RIGHT]:

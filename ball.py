@@ -2,12 +2,14 @@ import pygame
 import math
 
 class Ball: 
-    def __init__(self, pos =[0,0]):
+    def __init__(self, pos =[0,0], bricks=[]):
         self.color = "white"
         self.size = 5
         self.pos = pos
         self.velocity = [0, 0]
         self.speed = 3
+        self.bricks = bricks
+
     def draw(self):
         direction = math.atan2(self.velocity[1], self.velocity[0])
         x = math.cos(direction)
